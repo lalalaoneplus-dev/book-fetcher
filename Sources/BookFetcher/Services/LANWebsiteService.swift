@@ -63,31 +63,9 @@ public struct LANWebsiteService: Sendable {
     }
 
     private func ensureLocalLibrary() throws {
-        let fileManager = FileManager.default
         let metadata = AppConfiguration.library.appendingPathComponent("metadata.db")
-        if fileManager.fileExists(atPath: metadata.path) {
-            return
-        }
-
-        let legacyMetadata = AppConfiguration.legacyLibrary.appendingPathComponent("metadata.db")
-        guard fileManager.fileExists(atPath: legacyMetadata.path) else {
+        guard FileManager.default.fileExists(atPath: metadata.path) else {
             throw LANWebsiteServiceError.startFailed("The Calibre library could not be found.")
-        }
-        try fileManager.createDirectory(
-            at: AppConfiguration.library.deletingLastPathComponent(),
-            withIntermediateDirectories: true
-        )
-        let migration = try runner.run(
-            executable: "/usr/bin/ditto",
-            arguments: [AppConfiguration.legacyLibrary.path, AppConfiguration.library.path],
-            allowFailure: true
-        )
-        guard migration.terminationStatus == 0,
-              fileManager.fileExists(atPath: metadata.path) else {
-            throw LANWebsiteServiceError.startFailed(
-                "The Calibre library could not be copied out of iCloud: "
-                    + migration.output.trimmingCharacters(in: .whitespacesAndNewlines)
-            )
         }
     }
 

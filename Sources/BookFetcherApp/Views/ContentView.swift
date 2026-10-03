@@ -9,6 +9,13 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             header
+            if store.calibreMissing {
+                VStack(alignment: .leading, spacing: 4) {
+                    Label("Calibre is required for book conversion and the LAN library.", systemImage: "exclamationmark.triangle")
+                    Link("Download Calibre: https://calibre-ebook.com/download_osx", destination: URL(string: "https://calibre-ebook.com/download_osx")!)
+                }
+                .foregroundStyle(.orange)
+            }
             urlComposer
             storedBooksCard
             summaryCard

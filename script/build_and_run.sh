@@ -49,6 +49,11 @@ mkdir -p "$APP_MACOS" "$APP_RESOURCES"
 chmod +x "$APP_BINARY"
 /bin/cp "$ROOT_DIR/Resources/macOS-Info.plist" "$INFO_PLIST"
 /bin/cp "$ROOT_DIR/Resources/AppIcon.icns" "$APP_RESOURCES/AppIcon.icns"
+/bin/cp "$BUILD_SERVER" "$APP_RESOURCES/$SERVER_NAME"
+for resource in book-library.html start-intake.sh start-calibre-lan.sh intake-launch-agent.plist calibre-launch-agent.plist; do
+  /bin/cp "$ROOT_DIR/Resources/$resource" "$APP_RESOURCES/$resource"
+done
+/usr/bin/codesign --force --sign "$SIGNING_IDENTITY" "$APP_RESOURCES/$SERVER_NAME" >/dev/null
 
 /usr/bin/codesign --force --deep --sign "$SIGNING_IDENTITY" "$APP_BUNDLE" >/dev/null
 
@@ -87,7 +92,7 @@ bootstrap_launch_agent() {
 install_all() {
   /bin/mkdir -p "$SUPPORT_DIR" "$LOG_DIR" "$CALIBRE_SUPPORT_DIR" \
     "$CALIBRE_LOG_DIR" "$HOME/Library/LaunchAgents"
-  if [[ ! -s "$TOKEN_FILE" ]]; then
+  if [[ ! -e "$TOKEN_FILE" ]]; then
     /usr/bin/openssl rand -hex 24 >"$TOKEN_FILE"
   fi
   /bin/chmod 600 "$TOKEN_FILE"

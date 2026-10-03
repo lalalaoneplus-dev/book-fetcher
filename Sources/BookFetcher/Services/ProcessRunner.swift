@@ -22,7 +22,11 @@ enum ProcessRunnerError: LocalizedError {
     }
 }
 
-struct ProcessRunner: Sendable {
+protocol SetupProcessRunning: Sendable {
+    func run(executable: String, arguments: [String], allowFailure: Bool) throws -> ProcessResult
+}
+
+struct ProcessRunner: SetupProcessRunning, Sendable {
     func run(
         executable: String,
         arguments: [String],

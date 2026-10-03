@@ -20,6 +20,7 @@ final class FetchStore: ObservableObject {
     @Published private(set) var coverRepairMessage = "Checks for missing thumbnails without replacing valid covers."
     @Published private(set) var lanWebsiteMessage = "Starting the e-reader LAN website…"
     @Published private(set) var isLANWebsiteRunning = false
+    @Published private(set) var calibreMissing = !FileManager.default.fileExists(atPath: "/Applications/calibre.app")
     @Published private(set) var summaryBooks: [URL] = []
     @Published var selectedSummaryBookPath = ""
 
@@ -93,9 +94,21 @@ final class FetchStore: ObservableObject {
         websiteTask = Task { [weak self] in
             do {
                 let address = try await Task.detached(priority: .userInitiated) {
-                    try LANWebsiteService().startIfNeeded()
+                    guard let resources = Bundle.main.resourceURL else {
+                        throw AppSetupError.missingResource("Resources")
+                    }
+                    try AppSetupService(paths: AppSetupPaths(
+                        resources: resources,
+                        home: FileManager.default.homeDirectoryForCurrentUser
+                    )).install()
+                    guard FileManager.default.fileExists(atPath: "/Applications/calibre.app") else {
+                        return "Install Calibre from https://calibre-ebook.com/download_osx to use the library."
+                    }
+                    return try LANWebsiteService().startIfNeeded()
                 }.value
-                self?.isLANWebsiteRunning = true
+                let calibreMissing = !FileManager.default.fileExists(atPath: "/Applications/calibre.app")
+                self?.calibreMissing = calibreMissing
+                self?.isLANWebsiteRunning = !calibreMissing
                 self?.lanWebsiteMessage = address
             } catch is CancellationError {
                 self?.lanWebsiteMessage = "e-reader LAN website start cancelled."

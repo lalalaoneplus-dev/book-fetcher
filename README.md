@@ -5,6 +5,14 @@ book links and files, converts them to AZW3 with Calibre, and serves a library
 page over the local network. The iPhone companion can import books, build a
 library on the phone, and share it with an e-reader through its browser.
 
+## Install
+
+Book Fetcher runs on macOS 14 or later. Download the `.dmg` from
+https://github.com/lalalaoneplus-dev/book-fetcher/releases/latest, drag
+**Book Fetcher.app** to Applications, and open it. The app installs its local
+library helpers on launch. Calibre is required; download it from
+https://calibre-ebook.com/download_osx and place it in Applications.
+
 ## Bring books into the Mac library
 
 - Paste a direct, DRM-free book link or choose files and ZIP bundles already on
@@ -34,6 +42,9 @@ The packaging script builds `Book Fetcher.app` in `dist/` and opens it. Set
 `SIGN_IDENTITY` to use a signing certificate; otherwise it uses ad-hoc signing.
 Set `NOTARY_PROFILE` alongside `SIGN_IDENTITY` to submit the signed app for
 notarization.
+
+Run `./script/package.sh` to build the universal release app and DMG in `dist/`.
+Run `./script/uninstall.sh` to remove the local helpers and agents while keeping books and the pairing token.
 
 ## Install the Mac app and local library helper
 

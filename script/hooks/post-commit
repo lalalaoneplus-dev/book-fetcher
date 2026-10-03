@@ -1,0 +1,38 @@
+#!/bin/sh
+# Auto-sync worktree commits to main.
+#
+# Claude Code's worktree "Commit changes" chip shows the branch-vs-main diff, so
+# it lingers after a commit — a commit lands on the *branch*, not on main. This
+# hook fast-forwards `main` to the current claude/* worktree branch after EVERY
+# commit (yours via the app button, or the CLI), keeping branch == main so the
+# chip stays at zero. Best-effort push too.
+#
+# Install once (covers all worktrees — hooks are shared via the common git dir):
+#   cp script/hooks/post-commit "$(git rev-parse --git-common-dir)/hooks/post-commit"
+#   chmod +x "$(git rev-parse --git-common-dir)/hooks/post-commit"
+#
+# Safe by construction: --ff-only never rewrites history or forces; it silently
+# skips if main has diverged or its working tree is dirty. To stop auto-push,
+# delete the push line. To disable entirely, remove the installed hook.
+
+# git exports these into the hook's env while committing; clear them so the nested
+# `git -C <main worktree>` commands act on that repo, not this commit's index/gitdir.
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_PREFIX GIT_COMMON_DIR
+
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+case "$branch" in
+  main|HEAD|"") exit 0 ;;
+esac
+
+main_wt=$(git worktree list --porcelain \
+  | awk '/^worktree /{p=substr($0,10)} /^branch refs\/heads\/main$/{print p; exit}')
+[ -n "$main_wt" ] || exit 0
+
+git -C "$main_wt" merge --ff-only "$branch" >/dev/null 2>&1 || exit 0
+
+# Best-effort push. Synchronous (a couple of seconds) so it reliably lands; auth
+# prompts are disabled so it fails fast instead of hanging when creds aren't cached.
+# Don't want auto-push? Delete the next line — the flag still clears via the merge.
+GIT_TERMINAL_PROMPT=0 git -C "$main_wt" push origin main "$branch" >/dev/null 2>&1 || true
+
+exit 0

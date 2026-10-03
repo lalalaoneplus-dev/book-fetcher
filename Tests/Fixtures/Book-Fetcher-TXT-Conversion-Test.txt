@@ -1,0 +1,4 @@
+Book Fetcher TXT conversion test
+
+This small DRM-free text fixture verifies that Calibre accepts plain-text books
+and produces a valid AZW3 file for the e-reader LAN library workflow.

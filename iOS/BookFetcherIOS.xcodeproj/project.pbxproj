@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C8A4A97B480D0FB80750B0D /* IntakeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B158C73F4089335E1791C /* IntakeClient.swift */; };
+		24EA1CA589C319D8DC612F36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB18A6EF796D971143492F0 /* ContentView.swift */; };
+		25F3549F4E45B811277DD0E4 /* EReaderWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EBF7923CDC55FD8A90A4C8 /* EReaderWebServer.swift */; };
+		2BC635F5F20E5C2EFA8CC991 /* LocalLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ED5101CDC8FF697464B829 /* LocalLibraryService.swift */; };
+		37FE3C14B1C6C829BADCB3AB /* CachedLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A35B69AFAF5CB6B1F78D5 /* CachedLibrary.swift */; };
+		50B5C86414A070680681420D /* BookFetcherIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAAEE83BA5868AB5D490D0 /* BookFetcherIOSApp.swift */; };
+		55D5D7F16AAD2E44D63B55F9 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FB442D3AFCF8336A129D2 /* KeychainStore.swift */; };
+		7EAD1A5595857B6F90E6A8A5 /* MOBIWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF85B23C257AE3C9DE5A16 /* MOBIWriter.swift */; };
+		801B0E6DE99B4522E0245160 /* EReaderSetupGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA295B2FE8433C90B7723025 /* EReaderSetupGuideView.swift */; };
+		8529CD20C7E405A98ED22885 /* LibraryMirrorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1B70B3C51B0E11D2FB9D4 /* LibraryMirrorService.swift */; };
+		9D1EED5AD1D6FEFF5FE38851 /* OnDeviceBookConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399A6C4D9C351293190959 /* OnDeviceBookConverter.swift */; };
+		B96C7B430893343F0B1086BB /* TransferStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F786165C38FE3C92CBAC2F /* TransferStore.swift */; };
+		BD0771083F6D9C40F6A58C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E4B33104BBABCCBE597AE /* Assets.xcassets */; };
+		C89C68756D0C2BC893DCC469 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 42DA8AB247985049D95FB440 /* PrivacyInfo.xcprivacy */; };
+		D1BD95EE280999709BC0728B /* WiFiAddressResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A408C5069AAA864B94AAC /* WiFiAddressResolver.swift */; };
+		EF5E448A775DF8143758165E /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 52D98D9C2E7AD79861C365D2 /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13ED5101CDC8FF697464B829 /* LocalLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLibraryService.swift; sourceTree = "<group>"; };
+		35EBF7923CDC55FD8A90A4C8 /* EReaderWebServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EReaderWebServer.swift; sourceTree = "<group>"; };
+		3DB1B70B3C51B0E11D2FB9D4 /* LibraryMirrorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMirrorService.swift; sourceTree = "<group>"; };
+		42DA8AB247985049D95FB440 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		514FB442D3AFCF8336A129D2 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		5232156E78BC9D6361FCC3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		65EAAEE83BA5868AB5D490D0 /* BookFetcherIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFetcherIOSApp.swift; sourceTree = "<group>"; };
+		660B158C73F4089335E1791C /* IntakeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeClient.swift; sourceTree = "<group>"; };
+		7B3E4B33104BBABCCBE597AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B5A35B69AFAF5CB6B1F78D5 /* CachedLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedLibrary.swift; sourceTree = "<group>"; };
+		9CB18A6EF796D971143492F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A26A408C5069AAA864B94AAC /* WiFiAddressResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiAddressResolver.swift; sourceTree = "<group>"; };
+		B8EF85B23C257AE3C9DE5A16 /* MOBIWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOBIWriter.swift; sourceTree = "<group>"; };
+		BD399A6C4D9C351293190959 /* OnDeviceBookConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeviceBookConverter.swift; sourceTree = "<group>"; };
+		D0F786165C38FE3C92CBAC2F /* TransferStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStore.swift; sourceTree = "<group>"; };
+		EA295B2FE8433C90B7723025 /* EReaderSetupGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EReaderSetupGuideView.swift; sourceTree = "<group>"; };
+		FF229A330E901F62899FD41E /* BookFetcherIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BookFetcherIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		643076411B1DB7AE82ECB5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5E448A775DF8143758165E /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5169EC0BA32F605503E71AA6 /* BookFetcherIOS */ = {
+			isa = PBXGroup;
+			children = (
+				7B3E4B33104BBABCCBE597AE /* Assets.xcassets */,
+				65EAAEE83BA5868AB5D490D0 /* BookFetcherIOSApp.swift */,
+				8B5A35B69AFAF5CB6B1F78D5 /* CachedLibrary.swift */,
+				9CB18A6EF796D971143492F0 /* ContentView.swift */,
+				EA295B2FE8433C90B7723025 /* EReaderSetupGuideView.swift */,
+				35EBF7923CDC55FD8A90A4C8 /* EReaderWebServer.swift */,
+				5232156E78BC9D6361FCC3C8 /* Info.plist */,
+				660B158C73F4089335E1791C /* IntakeClient.swift */,
+				514FB442D3AFCF8336A129D2 /* KeychainStore.swift */,
+				3DB1B70B3C51B0E11D2FB9D4 /* LibraryMirrorService.swift */,
+				13ED5101CDC8FF697464B829 /* LocalLibraryService.swift */,
+				B8EF85B23C257AE3C9DE5A16 /* MOBIWriter.swift */,
+				BD399A6C4D9C351293190959 /* OnDeviceBookConverter.swift */,
+				42DA8AB247985049D95FB440 /* PrivacyInfo.xcprivacy */,
+				D0F786165C38FE3C92CBAC2F /* TransferStore.swift */,
+				A26A408C5069AAA864B94AAC /* WiFiAddressResolver.swift */,
+			);
+			path = BookFetcherIOS;
+			sourceTree = "<group>";
+		};
+		84EBE536A901116CF0B3DB0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF229A330E901F62899FD41E /* BookFetcherIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87432FE5D32F849277859A06 = {
+			isa = PBXGroup;
+			children = (
+				5169EC0BA32F605503E71AA6 /* BookFetcherIOS */,
+				84EBE536A901116CF0B3DB0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6870F32B326BA9BFB4A8D7D0 /* BookFetcherIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6BFE5255460002130636A8A /* Build configuration list for PBXNativeTarget "BookFetcherIOS" */;
+			buildPhases = (
+				3480C6E5DE91C8592AA7BB19 /* Sources */,
+				B38C26E3E8CD8DC3BC7433F1 /* Resources */,
+				643076411B1DB7AE82ECB5A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookFetcherIOS;
+			packageProductDependencies = (
+				52D98D9C2E7AD79861C365D2 /* ZIPFoundation */,
+			);
+			productName = BookFetcherIOS;
+			productReference = FF229A330E901F62899FD41E /* BookFetcherIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E258A7DFC00DF3918BFF6473 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6870F32B326BA9BFB4A8D7D0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1A54398E2241B09F9A9D558C /* Build configuration list for PBXProject "BookFetcherIOS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 87432FE5D32F849277859A06;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7A5C869DB4437127462C2ECE /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 84EBE536A901116CF0B3DB0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6870F32B326BA9BFB4A8D7D0 /* BookFetcherIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B38C26E3E8CD8DC3BC7433F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD0771083F6D9C40F6A58C45 /* Assets.xcassets in Resources */,
+				C89C68756D0C2BC893DCC469 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3480C6E5DE91C8592AA7BB19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B5C86414A070680681420D /* BookFetcherIOSApp.swift in Sources */,
+				37FE3C14B1C6C829BADCB3AB /* CachedLibrary.swift in Sources */,
+				24EA1CA589C319D8DC612F36 /* ContentView.swift in Sources */,
+				801B0E6DE99B4522E0245160 /* EReaderSetupGuideView.swift in Sources */,
+				25F3549F4E45B811277DD0E4 /* EReaderWebServer.swift in Sources */,
+				1C8A4A97B480D0FB80750B0D /* IntakeClient.swift in Sources */,
+				55D5D7F16AAD2E44D63B55F9 /* KeychainStore.swift in Sources */,
+				8529CD20C7E405A98ED22885 /* LibraryMirrorService.swift in Sources */,
+				2BC635F5F20E5C2EFA8CC991 /* LocalLibraryService.swift in Sources */,
+				7EAD1A5595857B6F90E6A8A5 /* MOBIWriter.swift in Sources */,
+				9D1EED5AD1D6FEFF5FE38851 /* OnDeviceBookConverter.swift in Sources */,
+				B96C7B430893343F0B1086BB /* TransferStore.swift in Sources */,
+				D1BD95EE280999709BC0728B /* WiFiAddressResolver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		214B494A8D17FF2B3E223E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BookFetcherIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prakrinkumar.BookFetcherIOS;
+				PRODUCT_NAME = "Book Fetcher";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BFD07F761DD62041A41803A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A4816D9DC17A5C1C6F4BB90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C5ABFE070F5914ACD24B2461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BookFetcherIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prakrinkumar.BookFetcherIOS;
+				PRODUCT_NAME = "Book Fetcher";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A54398E2241B09F9A9D558C /* Build configuration list for PBXProject "BookFetcherIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BFD07F761DD62041A41803A /* Debug */,
+				A4816D9DC17A5C1C6F4BB90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A6BFE5255460002130636A8A /* Build configuration list for PBXNativeTarget "BookFetcherIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214B494A8D17FF2B3E223E26 /* Debug */,
+				C5ABFE070F5914ACD24B2461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A5C869DB4437127462C2ECE /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52D98D9C2E7AD79861C365D2 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A5C869DB4437127462C2ECE /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E258A7DFC00DF3918BFF6473 /* Project object */;
+}

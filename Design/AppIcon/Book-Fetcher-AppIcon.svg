@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECAC42"/>
+      <stop offset="0.55" stop-color="#E79231"/>
+      <stop offset="1" stop-color="#DE781C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.30" r="0.62">
+      <stop offset="0" stop-color="#F6C868" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F6C868" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bookShadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#6f3200" flood-opacity="0.30"/>
+    </filter>
+    <filter id="badgeShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#6f3200" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <g filter="url(#bookShadow)">
+    <!-- page-stack block behind (gives the book its thickness / striped page edges) -->
+    <path d="M228 560 C340 600 452 612 512 630 L512 700 C448 682 338 668 232 622 C220 606 220 578 228 560 Z" fill="#E3D4B4"/>
+    <path d="M796 560 C684 600 572 612 512 630 L512 700 C576 682 686 668 792 622 C804 606 804 578 796 560 Z" fill="#E3D4B4"/>
+    <g stroke="#CFBD95" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M244 582 C346 618 454 630 512 648"/>
+      <path d="M250 602 C350 636 456 648 512 668"/>
+      <path d="M780 582 C678 618 570 630 512 648"/>
+      <path d="M774 602 C674 636 568 648 512 668"/>
+    </g>
+
+    <!-- pages (deep central gutter dip top & bottom => reads as an open book) -->
+    <path d="M512 392 C408 340 300 316 224 330 C204 416 210 512 236 574 C346 610 452 618 512 632 Z" fill="#FBF8F1"/>
+    <path d="M512 392 C616 340 724 316 800 330 C820 416 814 512 788 574 C678 610 572 618 512 632 Z" fill="#FDFAF4"/>
+
+    <!-- spine gutter with a soft inner shadow -->
+    <path d="M512 392 L512 632" stroke="#D0BE96" stroke-width="7" fill="none"/>
+    <path d="M512 396 C500 460 500 560 512 626" stroke="#00000018" stroke-width="16" fill="none"/>
+
+    <!-- text lines -->
+    <g stroke="#E7D9BB" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M454 404 C374 392 302 396 262 410"/>
+      <path d="M462 456 C384 446 316 450 280 464"/>
+      <path d="M570 404 C650 392 722 396 762 410"/>
+      <path d="M562 456 C640 446 708 450 744 464"/>
+    </g>
+  </g>
+
+  <!-- download badge, inside the safe area -->
+  <g filter="url(#badgeShadow)">
+    <circle cx="748" cy="762" r="140" fill="#FDFBF6"/>
+    <g fill="#E07C1E">
+      <rect x="736" y="690" width="24" height="86" rx="11"/>
+      <path d="M705 762 L791 762 L748 816 Z"/>
+      <rect x="700" y="832" width="96" height="22" rx="11"/>
+    </g>
+  </g>
+</svg>
